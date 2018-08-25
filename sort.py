@@ -91,6 +91,7 @@ def test(batch_size, count, max_val, save_path):
 
 	model = SortNet(input_size, hidden_size).to(device)
 	model.load_state_dict(torch.load(save_path))
+
 	x, y = getxy(batch_size, count, max_val)
 	pred = model(x)
 	for inp, tgt, out in zip(np.array(x), np.array(y), np.array(pred.detach())):
