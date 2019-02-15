@@ -113,7 +113,7 @@ if __name__  == '__main__':
 	
 	parser.add_argument('-m',
 			    '--exec_mode',
-			    default = 'train',
+			    default = 'test',
 			    help = 'Execution mode',
 			    choices = ['train', 'test'])
 	parser.add_argument('-b',
@@ -139,5 +139,4 @@ if __name__  == '__main__':
 	if mode == 'train':
 		train(batch_size, count, max_val, save_path, resume_flag = False)
 	else:
-		test(batch_size, count, max_val, save_path)
-	
+		test(batch_size, count, max_val, save_path)	
